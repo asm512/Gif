@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="gif2png.mainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:gif2png"
+             mc:Ignorable="d" 
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             d:DesignHeight="441" d:DesignWidth="534">
+    <Grid>
+        <StackPanel>
+            <Button x:Name="selectGIF" Margin="20,0,20,0" Click="selectGIF_Click">SELECT GIF</Button>
+            <Grid x:Name="attributeGrid" Height="100" Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20" Margin="22,36,68,36" Width="177">ATTRIBUTES</TextBlock>
+                <Grid Grid.Column="1" Margin="2,2,2,2" VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text=" GIF Name:" Foreground="White"></TextBlock>
+                        <TextBlock Text=" Size:" Foreground="White"></TextBlock>
+                        <TextBlock Text=" No. of frames:" Foreground="White"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="gifNameattrib" Foreground="White"></TextBlock>
+                        <TextBlock x:Name="gifSizeattrib" Foreground="White"></TextBlock>
+                        <TextBlock x:Name="gifFramesattrib" Foreground="White"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <ComboBox x:Name="formatCombobox" Margin="20,0,20,0" SelectedIndex="0">
+                <ComboBoxItem>SELECT IMAGE FORMAT</ComboBoxItem>
+                <ComboBoxItem>JPG</ComboBoxItem>
+                <ComboBoxItem>PNG</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="pathCombobox" Margin="20,20,20,20" SelectedIndex="0">
+                <ComboBoxItem>SELECT EXTRACTION PATH</ComboBoxItem>
+                <ComboBoxItem>Default (\extractedFrames)</ComboBoxItem>
+                <ComboBoxItem>Custom</ComboBoxItem>
+            </ComboBox>
+            <Grid Height="100">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="317*"></ColumnDefinition>
+                    <ColumnDefinition Width="217*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Width="247" Margin="23,42,47,32" Height="26" FontSize="20" Foreground="White">PREFIX for extracted frames</TextBlock>
+                <TextBox x:Name="prefixInput" Grid.Column="1" Margin="10,9,10,0" VerticalAlignment="Center"></TextBox>
+            </Grid>
+            <Button x:Name="extractFrames" Margin="20,60,20,0">EXTRACT OIL</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
