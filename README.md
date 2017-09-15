@@ -4,3 +4,4 @@ Extract each frame from gif into native image format (JPG or PNG) with customiza
 To add:
 
   -Export selected frames
+  -Native image format into gif 
