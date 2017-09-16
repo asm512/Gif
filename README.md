@@ -22,4 +22,5 @@ files, and at the moment, any extract path that isn't the default or custom one 
     
 #### Libraries and classes used
 -For visual design - MahApps (metro)
--For INI parsing and reading - easyINI (can be found under my repositories)
+-For INI parsing and reading 
+- easyINI (can be found under my repositories)
