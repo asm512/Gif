@@ -1,8 +1,10 @@
-# gif2png
-Extract each frame from gif into native image format (JPG or PNG) with customizable prefix
+### An application for extracting Gifs into native image formats
+[gif2png](https://github.com/peaches6/gif2png)
 
-To add:
+![Alt text](/demo.png?raw=true "Demo Image")
 
-  -Export selected frames
-  
-  -Native image format into gif 
+#### Quick Documentation and notes
+
+-Function to extract frames comes can be taken easier from my gists, (link in profile)
+
+    
