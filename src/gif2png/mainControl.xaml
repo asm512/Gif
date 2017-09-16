@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              d:DesignHeight="441" d:DesignWidth="534">
-    <Grid>
+    <Grid x:Name="UCgrid">
         <StackPanel>
             <Button x:Name="selectGIF" Margin="20,0,20,0" Click="selectGIF_Click">SELECT GIF</Button>
             <Grid x:Name="attributeGrid" Height="100" Visibility="Visible">
@@ -33,15 +33,12 @@
                     </StackPanel>
                 </Grid>
             </Grid>
-            <ComboBox x:Name="formatCombobox" Margin="20,0,20,0" SelectedIndex="0">
+            <ComboBox x:Name="formatCombobox" Margin="20,0,20,0" SelectedIndex="0" SelectionChanged="formatCombobox_SelectionChanged">
                 <ComboBoxItem>SELECT IMAGE FORMAT</ComboBoxItem>
                 <ComboBoxItem>JPG</ComboBoxItem>
                 <ComboBoxItem>PNG</ComboBoxItem>
             </ComboBox>
-            <ComboBox x:Name="pathCombobox" Margin="20,20,20,20" SelectedIndex="0">
-                <ComboBoxItem>SELECT EXTRACTION PATH</ComboBoxItem>
-                <ComboBoxItem>Default (\extractedFrames)</ComboBoxItem>
-                <ComboBoxItem>Custom</ComboBoxItem>
+            <ComboBox x:Name="pathCombobox" Margin="20,20,20,20" SelectedIndex="0" SelectionChanged="pathCombobox_SelectionChanged">
             </ComboBox>
             <Grid Height="100">
                 <Grid.ColumnDefinitions>
@@ -49,9 +46,9 @@
                     <ColumnDefinition Width="217*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Width="247" Margin="23,42,47,32" Height="26" FontSize="20" Foreground="White">PREFIX for extracted frames</TextBlock>
-                <TextBox x:Name="prefixInput" Grid.Column="1" Margin="10,9,10,0" VerticalAlignment="Center"></TextBox>
+                <TextBox x:Name="prefixInput" Grid.Column="1" Margin="10,9,10,0" VerticalAlignment="Center" TextChanged="prefixInput_TextChanged"></TextBox>
             </Grid>
-            <Button x:Name="extractFrames" Margin="20,60,20,0">EXTRACT OIL</Button>
+            <Button x:Name="extractFrames" Margin="20,60,20,0" Click="extractFrames_Click">EXTRACT OIL</Button>
         </StackPanel>
     </Grid>
 </UserControl>

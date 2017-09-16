@@ -25,7 +25,6 @@ namespace gif2png
         {
             InitializeComponent();
 
-
             mainWindowContainer.Children.Clear();
             mainControl mainControl = new mainControl();
             mainWindowContainer.Children.Add(mainControl);
