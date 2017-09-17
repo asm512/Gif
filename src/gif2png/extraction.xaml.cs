@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel;
 using System.Windows.Input;
 using System.Drawing.Imaging;
 using System.IO;
@@ -105,6 +106,7 @@ namespace gif2png
             InitializeComponent();
 
             int x = 0;
+            int y = 0;
             string trueFormat;
             string truePath;
 
@@ -180,11 +182,32 @@ namespace gif2png
 
             if(x == 3)
             {
+                ////Timer so that the metro ring is actually visible before extraction
+                //System.Windows.Forms.Timer progressRIng = new System.Windows.Forms.Timer { Interval = 750 };
+                //progressRIng.Start();
+                //progressRIng.Tick += (o, args) =>
+                //{
+                //    if (y < 2)
+                //    {
+                //        y++;
+                //    }
+                //    else
+                //    {
+                //        SplitGif(gifPath, File.ReadAllText("extractPath"), File.ReadAllText("temp"), tempINI.Read("prefix"));
+                //        System.Windows.MessageBox.Show("FORMAT :" + File.ReadAllText("temp"));
+                //        System.Windows.MessageBox.Show("EXTRACTPATH :" + File.ReadAllText("extractPath"));
+                //        finishedExtraction();
+                //        //(gifPath, extractpathAttrib, formatAttrib, prefixAttrib);
+                //        progressRIng.Stop();
+                //        returntoSettings();
+                //    }
+                //};
+
+
                 SplitGif(gifPath, File.ReadAllText("extractPath"), File.ReadAllText("temp"), tempINI.Read("prefix"));
                 System.Windows.MessageBox.Show("FORMAT :" + File.ReadAllText("temp"));
                 System.Windows.MessageBox.Show("EXTRACTPATH :" + File.ReadAllText("extractPath"));
                 finishedExtraction();
-                //(gifPath, extractpathAttrib, formatAttrib, prefixAttrib);
             }
 
             else
