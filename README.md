@@ -1,5 +1,5 @@
 ### An application for extracting Gifs into native image formats
-[gif2png](https://github.com/peaches6/gif2png)
+[Releases](https://github.com/peaches6/gif2png/releases)
 
 ![Alt text](https://github.com/peaches6/gif2png/raw/master/demo.gif?raw=true "Demo Image")
 
