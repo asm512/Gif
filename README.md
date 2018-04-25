@@ -1,4 +1,4 @@
-### An application for extracting Gifs into native image formats
+### Parse GIFs.
 
 ![Alt text](https://github.com/asm512/gif2png/raw/master/demo.gif?raw=true "Demo Image")
     
