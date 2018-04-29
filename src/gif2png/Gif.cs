@@ -2,6 +2,7 @@
 using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Text;
 
 namespace gif2png
 {
@@ -18,6 +19,21 @@ namespace gif2png
         }
 
         public override string ToString() => System.IO.Path.GetFileName(Path);
+
+        public bool IsGif()
+        {
+            byte[] bytes = File.ReadAllBytes(Path);
+
+            if (Encoding.UTF8.GetString(bytes).StartsWith("GIF89a") || Encoding.UTF8.GetString(bytes).StartsWith("GIF87a"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
         public void SetExtractPath(string path)
         {
