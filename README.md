@@ -4,6 +4,7 @@
     
 #### Libraries:
 
--For visual design - MahApps.Metro
+-For visual design 
+- MahApps.Metro
 -For INI parsing and reading 
 - easyINI (can be found under my repositories)
